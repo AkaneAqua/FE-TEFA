@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: transparent;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #4942e4;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+nav .login-button {
+  border: 2px solid #4942e4;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #4942e4;
+  font-weight: bold;
+}
+
+nav .login-button:hover {
+  background-color: #4942e4;
+  color: white;
+}
+
+.hero {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #a4a0f1);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  color: #4942e4;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #fff;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+  }
+
+  .login-button {
+    margin-top: 10px;
+  }
+}

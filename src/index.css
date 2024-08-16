@@ -104,7 +104,7 @@ nav .login-button:hover {
   line-height: 1.5;
 }
 
-#about {
+/* #about {
   background: linear-gradient(to top, #dfdeff, #4942e4);
   padding: 4rem 0;
   text-align: center;
@@ -122,9 +122,9 @@ nav .login-button:hover {
   margin-top: 1rem;
   color: #e0e0e0;
   line-height: 1.75;
-}
+} */
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   nav {
     flex-direction: column;
     align-items: center;

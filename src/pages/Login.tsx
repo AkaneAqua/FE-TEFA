@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 const Login: React.FC = () => {
   const [showForm, setShowForm] = useState(false);
@@ -53,7 +53,10 @@ const Login: React.FC = () => {
             <form className="mt-8 space-y-6">
               <div className="rounded-md shadow-sm space-y-4">
                 <div>
-                  <label htmlFor="username" className="sr-only">
+                  <label
+                    htmlFor="username"
+                    className="sr-only"
+                  >
                     Username
                   </label>
                   <input
@@ -67,7 +70,10 @@ const Login: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="password" className="sr-only">
+                  <label
+                    htmlFor="password"
+                    className="sr-only"
+                  >
                     Password
                   </label>
                   <input

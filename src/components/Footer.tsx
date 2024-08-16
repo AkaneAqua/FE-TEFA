@@ -8,10 +8,7 @@ const Footer: React.FC = () => {
         <div className="w-full text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Smart Presence</h2>
           <p className="max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
-            DashTail is a developer-friendly, ready-to-use admin template
-            designed for building attractive, scalable, and high-performing web
-            applications, powered by the cutting-edge technologies of Next.js
-            and Tailwind CSS.
+            Smart Presences is a website that provides presence for companies
           </p>
 
           {/* Social Media Icons */}
@@ -88,17 +85,17 @@ const Footer: React.FC = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-center md:text-left mb-4 md:mb-0">
-            © {new Date().getFullYear()} DashTail. All rights reserved.
+            © {new Date().getFullYear()} Smart Presences. All rights reserved.
           </p>
           <p className="text-sm text-center md:text-right">
             Hand-crafted & Made by{" "}
             <a
-              href="https://example.com"
+              href="https://www.instagram.com/rplthreee_?igsh=bjQ1YmNjOHllcGtx"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
             >
-              Codeshaper
+              XII-RPL-3
             </a>
           </p>
         </div>

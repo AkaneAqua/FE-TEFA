@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const Home: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const aboutSectionRef = useRef<HTMLDivElement>(null); // Define aboutSectionRef
+  const aboutSectionRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event: MouseEvent) => {
     if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -27,14 +27,18 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col items-center px-6 max-sm:px-0 lg:px-0 z-10">
       {/* Halaman 1 (Home Section) */}
-      <div className="flex-grow bg-gradient-to-t w-full from-[#4942E4] to-[#dfdeff] min-h-screen">
+      <div
+        id="home"
+        ref={aboutSectionRef}
+        className="flex-grow bg-gradient-to-t w-full from-[#4942E4] to-[#dfdeff] min-h-screen"
+      >
         <Navbar />
-        <div className="w-full max-w-3xl mx-auto p-2 mt-16">
+        <div className="w-full max-w-3xl mx-auto p-2 mt-56">
           <div className="text-center mt-24">
-            <h1 className="text-6xl font-bold text-neutral-100 mb-4">
+            <h1 className="text-6xl font-bold text-neutral-100 mb-5">
               Digital
             </h1>
-            <h1 className="text-6xl font-bold text-neutral-100 mb-4">
+            <h1 className="text-6xl font-bold text-neutral-100 mb-5">
               Platform For
             </h1>
             <h2 className="text-6xl font-bold text-black">All Employee</h2>
@@ -56,7 +60,7 @@ const Home: React.FC = () => {
               {/* Image Section */}
               <div className="h-68 flex-shrink-0">
                 <img
-                  src="/public/image/Home1.png" // Replace with your image path
+                  src="/public/image/Home1.png"
                   alt="Illustration"
                   className="w-[150px] h-[150px] lg:w-[300px] lg:h-[200px] object-contain"
                 />
@@ -78,7 +82,7 @@ const Home: React.FC = () => {
                 />
                 <div>
                   <h3 className="font-bold text-2xl drop-shadow-2xl justify-center items-center">
-                    Masuk
+                    Log in
                   </h3>
                   <p className="text-sm lg:text-base drop-shadow-2xl">
                     Coming to work on time is the key to productivity. By being
@@ -94,7 +98,9 @@ const Home: React.FC = () => {
                   className="w-10 h-10 mr-4"
                 />
                 <div>
-                  <h3 className="font-bold text-2xl drop-shadow-2xl">Izin</h3>
+                  <h3 className="font-bold text-2xl drop-shadow-2xl">
+                    Permission
+                  </h3>
                   <p className="text-sm lg:text-base drop-shadow-2xl">
                     Work permits are granted for urgent needs or emergency
                     conditions. Employees must apply for permission and obtain
@@ -109,7 +115,9 @@ const Home: React.FC = () => {
                   className="w-10 h-10 mr-4"
                 />
                 <div>
-                  <h3 className="font-bold text-2xl drop-shadow-2xl">Cuti</h3>
+                  <h3 className="font-bold text-2xl drop-shadow-2xl">
+                    Annual Leave
+                  </h3>
                   <p className="text-sm lg:text-base drop-shadow-2xl">
                     Work leave is an employee's right not to work for a certain
                     period of time, usually for rest or personal needs. Leave
@@ -126,19 +134,19 @@ const Home: React.FC = () => {
       <div
         id="about"
         ref={aboutSectionRef}
-        className="bg-gradient-to-t from-[#F7B5CA] to-[#A4A0F1] py-16 w-full min-h-screen flex flex-col items-center"
+        className="bg-gradient-to-t from-[#F7B5CA] to-[#4942E4]  py-16 w-full min-h-screen flex flex-col items-center"
       >
-        <div className="flex flex-col max-w-4xl justify-center">
+        <div className="flex flex-col max-w-4xl justify-center mt-60">
           <h1 className="text-4xl font-bold text-neutral-100 mb-4 text-left">
             About Us
           </h1>
-          <h2 className="text-8xl font-bold text-left">
+          <h2 className="text-3xl lg:text-6xl font-bold text-left">
             <span className="text-[#F7B5CA]">Helping organizations</span>{" "}
             <span className="text-white">
               increase efficiency through the power of digital presence.
             </span>
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mt-4 text-left">
+          <p className="text-lg text-white leading-relaxed mt-4 text-left">
             Web attendance is the future of workforce management in this digital
             era. Our platform revolutionizes the way companies track and manage
             attendance. We assist organizations of all sizes in securing

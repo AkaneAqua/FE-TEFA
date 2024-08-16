@@ -104,6 +104,26 @@ nav .login-button:hover {
   line-height: 1.5;
 }
 
+#about {
+  background: linear-gradient(to top, #dfdeff, #4942e4);
+  padding: 4rem 0;
+  text-align: center;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#about p {
+  font-size: 1.125rem;
+  margin-top: 1rem;
+  color: #e0e0e0;
+  line-height: 1.75;
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;

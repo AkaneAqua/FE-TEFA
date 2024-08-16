@@ -8,6 +8,14 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({behavior: "smooth"});
+    }
+    setIsMenuOpen(false); // Close the mobile menu after clicking
+  };
+
   return (
     <nav className="bg-[#fffff00]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,24 +31,24 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <Link
-              to="/"
+            <button
+              onClick={() => scrollToSection("home")}
               className="text-gray-700 hover:text-black text-sm font-medium"
             >
               Home
-            </Link>
-            <Link
-              to="#about"
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
               className="text-gray-700 hover:text-black text-sm font-medium"
             >
               About
-            </Link>
-            <Link
-              to="#other"
+            </button>
+            <button
+              onClick={() => scrollToSection("other")}
               className="text-gray-700 hover:text-black text-sm font-medium"
             >
               Other
-            </Link>
+            </button>
           </div>
 
           <div className="hidden md:flex items-center">
@@ -82,24 +90,24 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              to="/"
+            <button
+              onClick={() => scrollToSection("home")}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white"
             >
               Home
-            </Link>
-            <Link
-              to="/about"
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white"
             >
               About
-            </Link>
-            <Link
-              to="/other"
+            </button>
+            <button
+              onClick={() => scrollToSection("other")}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white"
             >
               Other
-            </Link>
+            </button>
             <Link
               to="/login"
               className="block px-3 py-2 rounded-md text-base font-medium text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white transition duration-300"
